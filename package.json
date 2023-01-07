@@ -6,11 +6,20 @@
   "scripts": {
     "start": "npm run build && node buildandreleasetask/index.js",
     "build": "npx webpack --config webpack.config.js",
-    "pack": "npm run build && tfx extension create --manifest-globs vss-extension.json --rev-version"
+    "pack:dev": "npm run build && tfx extension create --manifest-globs vss-extension-dev.json --rev-version",
+    "pack:prod": "npm run build && tfx extension create --manifest-globs vss-extension.json --rev-version"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Mike Huang <wellwind@gmail.com>",
+  "homepage": "https://github.com/wellwind/azuredevops-extension-scs-scan",
+  "bugs": {
+    "url": "https://github.com/wellwind/azuredevops-extension-scs-scan/issues"
+  },
+  "repository": {
+    "type": "git",
+    "uri": "https://github.com/wellwind/azuredevops-extension-scs-scan"
+  },
+  "license": "MIT",
   "dependencies": {
     "azure-pipelines-task-lib": "^4.1.0"
   },
