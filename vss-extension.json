@@ -1,0 +1,36 @@
+{
+    "manifestVersion": 1,
+    "id": "scs-scan-task",
+    "name": "Security Code Scan Task",
+    "version": "0.3.2",
+    "publisher": "MikeHuang",
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],    
+    "description": "Add Security Code Scan task to pipeline. Security Code Scan is a static code analyzer for .NET",
+    "categories": [
+        "Azure Pipelines"
+    ],
+    "icons": {
+      "default": "scs.png"
+    },
+    "files": [
+        {
+            "path": "buildandreleasetask"
+        }
+    ],
+    "contributions": [
+        {
+            "id": "scs-scan-task",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "buildandreleasetask"
+            }
+        }
+    ]
+}
