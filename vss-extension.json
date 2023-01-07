@@ -2,7 +2,7 @@
     "manifestVersion": 1,
     "id": "scs-scan-task",
     "name": "Security Code Scan Task",
-    "version": "0.3.8",
+    "version": "0.3.9",
     "publisher": "MikeHuang",
     "public": true,
     "targets": [

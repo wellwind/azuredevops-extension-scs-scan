@@ -9,7 +9,7 @@ async function run() {
     const exportPath = tl.getInput("exportPath", false);
     const otherOptions = tl.getInput("otherOptions", false);
 
-    const agentTempDirectory = tl.getVariable("Agent.TempDirectory");
+    const agentTempDirectory = tl.getVariable("Agent.ToolsDirectory");
     const scsInstallationPath = `${agentTempDirectory}/scs`;
     // install security-scan dotnet tool
     const installResult = child_process.execSync(`dotnet tool update security-scan --tool-path ${scsInstallationPath}`).toString("utf-8");
@@ -18,7 +18,7 @@ async function run() {
     // build scan command
     let command = `${scsInstallationPath}/security-scan`;
     if (exportPath && exportPath.length > 0) {
-      command += ` -x ${exportPath}`;
+      command += ` -x "${exportPath}"`;
     }
     if (otherOptions && otherOptions.length > 0) {
       command += ` ${otherOptions}`;
