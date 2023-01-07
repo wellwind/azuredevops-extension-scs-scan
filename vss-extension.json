@@ -2,14 +2,15 @@
     "manifestVersion": 1,
     "id": "scs-scan-task",
     "name": "Security Code Scan Task",
-    "version": "0.3.7",
+    "version": "0.3.8",
     "publisher": "MikeHuang",
     "public": true,
     "targets": [
         {
             "id": "Microsoft.VisualStudio.Services"
         }
-    ],    
+    ], 
+    "homepage": "https://github.com/wellwind/azuredevops-extension-scs-scan",   
     "description": "Add Security Code Scan task to pipeline. Security Code Scan is a static code analyzer for .NET",
     "categories": [
         "Azure Pipelines"
@@ -27,6 +28,15 @@
             "path": "buildandreleasetask"
         }
     ],
+    "links": {
+      "home": {
+        "uri": "https://github.com/wellwind/azuredevops-extension-scs-scan"
+      }
+    },
+    "repository": {
+      "type": "git",
+      "uri": "https://github.com/wellwind/azuredevops-extension-scs-scan"
+    },
     "contributions": [
         {
             "id": "scs-scan-task",
